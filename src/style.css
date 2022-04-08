@@ -1,0 +1,71 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+body {
+  margin: 0;
+  background-color: black;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.app__container {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.app__body {
+  width: 70%;
+  max-width: 400px;
+  height: 620px;
+}
+.app__header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  margin-top: -1em;
+  margin-bottom: 0.5em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+.image__holder {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image__holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.app__header h3 {
+  color: white;
+  font-family: cursive;
+  font-weight: 400;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.app__video {
+  width: 100%;
+  height: 520px;
+  /* background-color: black; */
+
+  /* important for snap behaviour */
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+.app__video::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .app__video {
+    height: 550px;
+  }
+}
